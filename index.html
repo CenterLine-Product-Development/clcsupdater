@@ -1,16 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate Test</title>
-    <link rel="stylesheet" href="style.css">
+    <title>CLCS Programming Tool</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=1.1.8">
+
 </head>
 
-<body>
-    <script src="index.js"></script>
+<body style="padding-top: 65px;" class="bg-light">
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark  fixed-top  px-3">
+        <a class="navbar-brand" href="/">&nbsp;&nbsp;&nbsp;CLCS Programming Tool</a>
+    </nav>
+
+    <div class="container">
+        <div class="card border-secondary shadow mx-auto col-8">
+            <h5 class="card-header text-white bg-secondary ">Update Firmware</h5>
+            <div class="card-body">
+                <!-- <div class="input-group input-group-lg"> -->
+                <!-- <div class="row"> -->
+                <!-- <form> -->
+                <div class="cl-row-form col-12">
+                    <input type='file' name='update' class="form-control form-control-lg col-12" id="file_object">
+                </div>
+                <!-- Vertical space -->
+                <br>
+
+                <!-- <h1 style='text-align: center;'>Update Firmware</h1> -->
+                <div class="btn btn-success btn-lg" id="but_program_device">Program Device
+                </div>
+                <br>
+                <br>
+                <p class="card-text">Selected Device : <strong><span id="info_device_selected">Not
+                            Selected</span></strong>
+                </p>
+                <br>
+
+                <div class="row" style="padding-bottom: 10px;">
+                    <span id="programming_list"></span>
+
+                </div>
+                <div class="alert alert-success visually-hidden" id="programming_success_alert">
+                    Firmware Programming Completed Succesfully!
+                </div>
+
+                <div class="alert alert-danger visually-hidden">
+                    Error : <span id="info_programming_error"></span>
+                </div>
+
+                <!-- </form> -->
+                <!-- </div> -->
+
+                <!-- </div> -->
+
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="bundle.js"></script>
+    <script src="programCLCS.js" type="module"></script>
+
+
 </body>
+<script>
+
+    var programming_in_progress = false;
+    const programButton = document.getElementById("but_program_device");
+    var file_url = "";
+
+    var file_firmware;
+
+</script>
+
+
+
+
 
 </html>
