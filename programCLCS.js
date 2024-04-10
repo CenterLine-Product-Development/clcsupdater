@@ -72,9 +72,7 @@ programButton.onclick = async () => {
     programming_in_progress = true;
 
     if (device === null || true) {
-        device = await navigator.serial.requestPort({
-            filters: [{ usbVendorId: 0x10c4 }]
-        });
+        device = await navigator.serial.requestPort();
         transport = new Transport(device);
     }
 
